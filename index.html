@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ссылка на группу</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin-top: 50px;
+        }
+        .secret-message {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            font-weight: 800;
+            color: red;
+        }
+    </style>
+</head>
+<body>
+    <h1>Привет!</h1>
+    <p>Вот ссылка на классную группу, которую я нашёл:</p>
+    <a href="https://t.me/+Gz4bOkme-kUxYzZi" target="_blank">Посмотреть группу</a>
+    
+    <div class="secret-message" id="secretMessage">
+        Я люблю тебя!
+    </div>
+    
+    <script>
+        // Функция для проверки, кто открыл страницу
+        function checkUser() {
+            // Запрашиваем имя пользователя
+            var name = prompt("Введите ваше имя:");
+            // Проверяем, является ли это имя именем твоей девушки
+            if (name.toLowerCase() === "MANIJA".toLowerCase()) {
+                // Показываем секретное сообщение
+                document.getElementById('secretMessage').style.display = 'block';
+            }
+        }
+        
+        // Запускаем функцию при загрузке страницы
+        window.onload = checkUser;
+    </script>
+</body>
+</html>
